@@ -23,7 +23,7 @@ public:
     T* begin()const;
     T* end()const;
     T& at(int indeX);
-    T&operator[](int indis);
+    T&operator[](int indeX);
 };
 
 
