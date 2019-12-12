@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/YUNUS/CLionProjects/TermProject/cppVector.cpp
+cppVector.h
+C:/Users/YUNUS/CLionProjects/TermProject/cppVector.h
+iostream
+-
+
+C:/Users/YUNUS/CLionProjects/TermProject/cppVector.h
+
+C:/Users/YUNUS/CLionProjects/TermProject/main.cpp
+iostream
+-
+fstream
+-
+sstream
+-
+string
+-
+cppVector.cpp
+C:/Users/YUNUS/CLionProjects/TermProject/cppVector.cpp
+
