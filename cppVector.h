@@ -15,7 +15,7 @@ public:
     int cap ()const;
     void push_back(const T &value);
     void pop_back();
-    void reset_vector();
+    void reset_vector(int index=0,int capacity=1);
     void clear();
     bool isEmpty()const;
     T front() const;

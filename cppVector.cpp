@@ -89,17 +89,17 @@ T *cppVector<T>::end() const {
 }
 
 template<class T>
-void cppVector<T>::reset_vector() {
+void cppVector<T>::clear() {
+    reset_vector();
+    data = new T[capacity];
+}
+
+template<class T>
+void cppVector<T>::reset_vector(int index, int capacity) {
     delete [] data;
     data = NULL;
     this->index = index;
     this->capacity = capacity;
-}
-
-template<class T>
-void cppVector<T>::clear() {
-    reset_vector();
-    data = new T[data];
 }
 
 template<class T>
