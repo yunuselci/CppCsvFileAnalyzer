@@ -11,15 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62ae7062-556e-488c-b26a-c31f966641bc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TermProject.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TermProject.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TermProject.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TermProject.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TermProject.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TermProject.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/deneme.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/deneme.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="62ae7062-556e-488c-b26a-c31f966641bc" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,11 +21,7 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
   <component name="ProjectId" id="1UnWX3wDlsSKdk0jYhviDJXIZGK" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -41,7 +29,6 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RunManager">
@@ -79,7 +66,6 @@
       <workItem from="1576085847694" duration="3128000" />
       <workItem from="1576089360440" duration="3095000" />
       <workItem from="1576184321981" duration="3297000" />
-      <workItem from="1576236018180" duration="3570000" />
     </task>
     <servers />
   </component>
@@ -95,22 +81,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="262" y="239" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1576186763245" />
-    <state width="1877" height="199" key="GridCell.Tab.0.bottom" timestamp="1576239586101">
+    <state width="916" height="262" key="GridCell.Tab.0.bottom" timestamp="1576186875574">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="199" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1576239586100" />
-    <state width="1877" height="199" key="GridCell.Tab.0.center" timestamp="1576239586100">
+    <state width="916" height="262" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1576186875574" />
+    <state width="916" height="262" key="GridCell.Tab.0.center" timestamp="1576186875574">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="199" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1576239586100" />
-    <state width="1877" height="199" key="GridCell.Tab.0.left" timestamp="1576239586100">
+    <state width="916" height="262" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1576186875574" />
+    <state width="916" height="262" key="GridCell.Tab.0.left" timestamp="1576186875574">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="199" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1576239586100" />
-    <state width="1877" height="199" key="GridCell.Tab.0.right" timestamp="1576239586100">
+    <state width="916" height="262" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1576186875574" />
+    <state width="916" height="262" key="GridCell.Tab.0.right" timestamp="1576186875574">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="199" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1576239586100" />
+    <state width="916" height="262" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1576186875574" />
     <state x="1007" y="0" width="870" height="929" key="dock-window-1" timestamp="1576085853284">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
