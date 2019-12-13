@@ -4,7 +4,5 @@
 CMakeFiles/TermProject.dir/cppVector.cpp.obj: ../cppVector.cpp
 CMakeFiles/TermProject.dir/cppVector.cpp.obj: ../cppVector.h
 
-CMakeFiles/TermProject.dir/main.cpp.obj: ../cppVector.cpp
-CMakeFiles/TermProject.dir/main.cpp.obj: ../cppVector.h
 CMakeFiles/TermProject.dir/main.cpp.obj: ../main.cpp
 
