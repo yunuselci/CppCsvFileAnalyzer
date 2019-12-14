@@ -45,6 +45,7 @@ istream &operator>>(istream &str, CSVRow &data) {
     return str;
 }
 
+<<<<<<< HEAD
 
 int main() {
     ifstream file("OnlineRetail.csv");
@@ -80,4 +81,24 @@ int main() {
 
 
 
+=======
+int main() {
+    ifstream file("OnlineRetail.csv");
+    int counter = 0;
+    CSVRow row;
+
+
+    while (file >> row) {
+        if (row[7] == "United Kingdom" /*&& row[4] != "3.12.2010 11:27"*/) {
+            //cout << "4th Element(" << row[7] << ")\n";
+            cout << "Stock Code: " << row[1]
+                 << "\tDescription: " << row[2]
+                 << "\tQuantitiy: " << row[3]
+                 << "\tDate: " << row[4]
+                 << endl;
+            counter++;
+        }
+    }
+    cout << counter << endl;
+>>>>>>> 050beec0cc85917723ada4c533b1a9e6609ec2ef
 }
