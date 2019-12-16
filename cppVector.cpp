@@ -1,11 +1,17 @@
 #include "cppVector.h"
 #include <iostream>
-
 using namespace std;
 
 template<class T>
 cppVector<T>::cppVector():data(NULL), capacity(1), index(0) {
     data = new T[capacity];
+}
+
+
+
+template<class T>
+cppVector<T>::~cppVector() {
+    reset_vector();
 }
 
 template<class T>
@@ -53,27 +59,27 @@ void cppVector<T>::push_back(const T &value) {
 
 template<class T>
 void cppVector<T>::pop_back() {
-    if (isEmpty())
+    if (is_empty_vector())
         throw "Error : Vektor zaten bos.";
     index--;
     shrink();
 }
 
 template<class T>
-bool cppVector<T>::isEmpty() const {
+bool cppVector<T>::is_empty_vector() const {
     return size() == 0;
 }
 
 template<class T>
 T cppVector<T>::front() const {
-    if (isEmpty())
+    if (is_empty_vector())
         throw "Error : Vektor zaten bos.";
     return data[0];
 }
 
 template<class T>
 T cppVector<T>::back() const {
-    if (isEmpty())
+    if (is_empty_vector())
         throw "Error : Vektor zaten bos.";
     return data[index - 1];
 }
@@ -85,7 +91,7 @@ T *cppVector<T>::begin() const {
 
 template<class T>
 T *cppVector<T>::end() const {
-    return data+size();
+    return data + size();
 }
 
 template<class T>
@@ -96,7 +102,7 @@ void cppVector<T>::clear() {
 
 template<class T>
 void cppVector<T>::reset_vector(int index, int capacity) {
-    delete [] data;
+    delete[] data;
     data = NULL;
     this->index = index;
     this->capacity = capacity;
@@ -104,9 +110,9 @@ void cppVector<T>::reset_vector(int index, int capacity) {
 
 template<class T>
 T &cppVector<T>::at(int indeX) {
-    if(indeX >= 0 && indeX < size())
+    if (indeX >= 0 && indeX < size())
         return data[indeX];
-    throw "Error: indeX problemi.";
+    throw "Error: Vector index'i tasti!.";
 }
 
 template<class T>

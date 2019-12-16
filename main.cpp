@@ -3,19 +3,12 @@
 #include <sstream>
 #include <string>
 #include "cppVector.cpp"
-#include <algorithm>
-#include <map>
-
 using namespace std;
 
 class CSVRow {
 public:
     string const &operator[](size_t index) {
         return m_data[index];
-    }
-
-    size_t size() const {
-        return m_data.size();
     }
 
     void readNextRow(istream &str) {
@@ -39,66 +32,98 @@ public:
 private:
     cppVector<string> m_data;
 };
-
 istream &operator>>(istream &str, CSVRow &data) {
     data.readNextRow(str);
     return str;
 }
 
-<<<<<<< HEAD
+class HashEntry
+{
+public:
+    string key; // the word is actually a key, no need to store hash value
+    size_t value; // the word count is the value.
+    HashEntry(string key)
+            : key(std::move(key)), value(1) // move the string to avoid unnecessary copying
+    { }
+};
 
-int main() {
-    ifstream file("OnlineRetail.csv");
-    CSVRow row;
-    cppVector<string> most;
 
-    while (file >> row) {
-        if (row[7] == "United Kingdom") {
-            most.push_back(row[1]);
-            /*cout << "Stock Code: " << row[1]
-                 << "\tDescription: " << row[2]
-                 << "\tQuantitiy: " << row[3]
-                 << "\tDate: " << row[4]
-                 << endl;*/
+class HashMap
+{
+private:
+    HashEntry * *table;
+public:
+    HashMap()
+    {
+        table = new HashEntry *[1000000];
+        for (int i = 0; i < 1000000; i++)
+        {
+            table[i] = NULL;
         }
     }
 
-    map<string, int> src;
-    for (auto x:most)
-        ++src[x];
-    multimap<int, string, greater<int> > dst;
-    transform(src.begin(), src.end(), inserter(dst, dst.begin()),
-              [](const pair<string, int> &p) {
-                  return pair<int, string>(p.second, p.first);
-              }
-    );
-
-    std::multimap<int, std::string>::iterator it = dst.begin();
-    cout << "Product (StockCode)\t" << "Description\t" << "#TotalQuantity\t" << endl;
-    for (int count = 0; count < 10 && it != dst.end(); ++it, ++count) {
-        std::cout << it->second << ":" << it->first << std::endl;
+    size_t Hash(const string &key)
+    {
+        size_t hash = 5381;
+        for (auto &&c : key)
+            hash = ((hash << 5) + hash) + c;
+        return hash;
     }
-
-
-
-=======
-int main() {
-    ifstream file("OnlineRetail.csv");
-    int counter = 0;
-    CSVRow row;
-
-
-    while (file >> row) {
-        if (row[7] == "United Kingdom" /*&& row[4] != "3.12.2010 11:27"*/) {
-            //cout << "4th Element(" << row[7] << ")\n";
-            cout << "Stock Code: " << row[1]
-                 << "\tDescription: " << row[2]
-                 << "\tQuantitiy: " << row[3]
-                 << "\tDate: " << row[4]
-                 << endl;
-            counter++;
+    void Insert(string key,string quantity)
+    {
+        size_t index = Hash(key) % 1000000;
+        while (table[index] != nullptr) {
+            if (table[index]->key == key) {
+                table[index]->value = table[index]->value + stoi(quantity);
+                return;
+            }
+            ++index;
+            if (index == 1000000) // "wrap around" if we've reached the end of the hash table
+                index = 0;
         }
+
+        table[index] = new HashEntry(std::move(key));
     }
-    cout << counter << endl;
->>>>>>> 050beec0cc85917723ada4c533b1a9e6609ec2ef
+
+    HashEntry *Find(const string &key)
+    {
+        size_t index = Hash(key) % 1000000;
+        while (table[index] != nullptr) {
+            if (table[index]->key == key) {
+                cout << table[index]->value;
+            }
+            ++index;
+            if (index == 1000000)
+                index = 0;
+        }
+
+        return nullptr;
+    }
+
+};
+
+int main() {
+    try {
+        ifstream file("deneme.csv");
+        CSVRow row;
+        cppVector<string> most;
+        cppVector<string> value;
+        HashMap stockCodes;
+        while (file >> row) {
+            stockCodes.Insert(row[1],row[3]);
+            if (row[7] == "United Kingdom") {
+                /*
+                cout << "Stock Code: " << row[1]
+                     << "\tDescription: " << row[2]
+                     << "\tQuantity: " << row[3]
+                     << "\tDate: " << row[4]
+                     << endl;*/
+
+            }
+        }
+        stockCodes.Find("85123A");
+    }
+    catch (const char *ex) { //->Exception from cppVector class.
+        cout << ex << endl;
+    }
 }
