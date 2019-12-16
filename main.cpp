@@ -41,9 +41,9 @@ class HashEntry
 {
 public:
     string key; // the word is actually a key, no need to store hash value
-    size_t value; // the word count is the value.
-    HashEntry(string key)
-            : key(std::move(key)), value(1) // move the string to avoid unnecessary copying
+    int value; // the word count is the value.
+    HashEntry(string key, int quantity)
+            : key(std::move(key)), value(quantity) // move the string to avoid unnecessary copying
     { }
 };
 
@@ -71,10 +71,12 @@ public:
     }
     void Insert(string key,string quantity)
     {
+        int intValueOfQuantity = 0;
+        istringstream(quantity) >> intValueOfQuantity;
         size_t index = Hash(key) % 1000000;
         while (table[index] != nullptr) {
             if (table[index]->key == key) {
-                table[index]->value = table[index]->value + stoi(quantity);
+                table[index]->value = table[index]->value + intValueOfQuantity;
                 return;
             }
             ++index;
@@ -82,7 +84,7 @@ public:
                 index = 0;
         }
 
-        table[index] = new HashEntry(std::move(key));
+        table[index] = new HashEntry(std::move(key), intValueOfQuantity);
     }
 
     HashEntry *Find(const string &key)
@@ -104,10 +106,8 @@ public:
 
 int main() {
     try {
-        ifstream file("deneme.csv");
+        ifstream file("OnlineRetail.csv");
         CSVRow row;
-        cppVector<string> most;
-        cppVector<string> value;
         HashMap stockCodes;
         while (file >> row) {
             stockCodes.Insert(row[1],row[3]);
