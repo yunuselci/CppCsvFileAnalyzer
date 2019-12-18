@@ -149,6 +149,33 @@ cppVector.cpp.s:
 	$(MAKE) -f CMakeFiles\TermProject.dir\build.make CMakeFiles/TermProject.dir/cppVector.cpp.s
 .PHONY : cppVector.cpp.s
 
+hashTable.obj: hashTable.cpp.obj
+
+.PHONY : hashTable.obj
+
+# target to build an object file
+hashTable.cpp.obj:
+	$(MAKE) -f CMakeFiles\TermProject.dir\build.make CMakeFiles/TermProject.dir/hashTable.cpp.obj
+.PHONY : hashTable.cpp.obj
+
+hashTable.i: hashTable.cpp.i
+
+.PHONY : hashTable.i
+
+# target to preprocess a source file
+hashTable.cpp.i:
+	$(MAKE) -f CMakeFiles\TermProject.dir\build.make CMakeFiles/TermProject.dir/hashTable.cpp.i
+.PHONY : hashTable.cpp.i
+
+hashTable.s: hashTable.cpp.s
+
+.PHONY : hashTable.s
+
+# target to generate assembly for a file
+hashTable.cpp.s:
+	$(MAKE) -f CMakeFiles\TermProject.dir\build.make CMakeFiles/TermProject.dir/hashTable.cpp.s
+.PHONY : hashTable.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -176,6 +203,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles\TermProject.dir\build.make CMakeFiles/TermProject.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+rowReader.obj: rowReader.cpp.obj
+
+.PHONY : rowReader.obj
+
+# target to build an object file
+rowReader.cpp.obj:
+	$(MAKE) -f CMakeFiles\TermProject.dir\build.make CMakeFiles/TermProject.dir/rowReader.cpp.obj
+.PHONY : rowReader.cpp.obj
+
+rowReader.i: rowReader.cpp.i
+
+.PHONY : rowReader.i
+
+# target to preprocess a source file
+rowReader.cpp.i:
+	$(MAKE) -f CMakeFiles\TermProject.dir\build.make CMakeFiles/TermProject.dir/rowReader.cpp.i
+.PHONY : rowReader.cpp.i
+
+rowReader.s: rowReader.cpp.s
+
+.PHONY : rowReader.s
+
+# target to generate assembly for a file
+rowReader.cpp.s:
+	$(MAKE) -f CMakeFiles\TermProject.dir\build.make CMakeFiles/TermProject.dir/rowReader.cpp.s
+.PHONY : rowReader.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -188,9 +242,15 @@ help:
 	@echo ... cppVector.obj
 	@echo ... cppVector.i
 	@echo ... cppVector.s
+	@echo ... hashTable.obj
+	@echo ... hashTable.i
+	@echo ... hashTable.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... rowReader.obj
+	@echo ... rowReader.i
+	@echo ... rowReader.s
 .PHONY : help
 
 

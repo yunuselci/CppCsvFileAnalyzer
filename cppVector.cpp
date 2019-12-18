@@ -1,13 +1,12 @@
 #include "cppVector.h"
 #include <iostream>
+
 using namespace std;
 
 template<class T>
 cppVector<T>::cppVector():data(NULL), capacity(1), index(0) {
     data = new T[capacity];
 }
-
-
 
 template<class T>
 cppVector<T>::~cppVector() {
@@ -28,20 +27,6 @@ void cppVector<T>::growth() {
 }
 
 template<class T>
-void cppVector<T>::shrink() {
-    if (size() <= cap() / 2) {
-        capacity /= 2;
-        T *tmp = new T[capacity];
-        for (int i = 0; i < size(); ++i)
-            tmp[i] = data[i];
-        delete[] data;
-        data = tmp;
-    }
-
-
-}
-
-template<class T>
 int cppVector<T>::size() const {
     return index;
 }
@@ -55,43 +40,6 @@ template<class T>
 void cppVector<T>::push_back(const T &value) {
     growth();
     data[index++] = value;
-}
-
-template<class T>
-void cppVector<T>::pop_back() {
-    if (is_empty_vector())
-        throw "Error : Vektor zaten bos.";
-    index--;
-    shrink();
-}
-
-template<class T>
-bool cppVector<T>::is_empty_vector() const {
-    return size() == 0;
-}
-
-template<class T>
-T cppVector<T>::front() const {
-    if (is_empty_vector())
-        throw "Error : Vektor zaten bos.";
-    return data[0];
-}
-
-template<class T>
-T cppVector<T>::back() const {
-    if (is_empty_vector())
-        throw "Error : Vektor zaten bos.";
-    return data[index - 1];
-}
-
-template<class T>
-T *cppVector<T>::begin() const {
-    return data;
-}
-
-template<class T>
-T *cppVector<T>::end() const {
-    return data + size();
 }
 
 template<class T>

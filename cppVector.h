@@ -1,8 +1,6 @@
 #ifndef TERMPROJECT_CPPVECTOR_H
 #define TERMPROJECT_CPPVECTOR_H
 
-//No needed insert method, so I didn't declare it.
-//Also front,back,pop_back is not needed.
 template<class T>
 class cppVector {
     T *data;
@@ -11,10 +9,9 @@ class cppVector {
 
     void growth();
 
-    void shrink();
-
 public:
     cppVector();
+
     ~cppVector();
 
     int size() const;
@@ -23,21 +20,10 @@ public:
 
     void push_back(const T &value);
 
-    void pop_back();
 
     void reset_vector(int index = 0, int capacity = 1);
 
     void clear();
-
-    bool is_empty_vector() const;
-
-    T front() const;
-
-    T back() const;
-
-    T *begin() const;
-
-    T *end() const;
 
     T &at(int indeX);
 

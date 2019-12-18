@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/TermProject.dir/cppVector.cpp.obj"
+  "CMakeFiles/TermProject.dir/hashTable.cpp.obj"
   "CMakeFiles/TermProject.dir/main.cpp.obj"
+  "CMakeFiles/TermProject.dir/rowReader.cpp.obj"
   "TermProject.exe"
   "TermProject.exe.manifest"
   "TermProject.pdb"

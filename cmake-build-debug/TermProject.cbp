@@ -86,7 +86,19 @@
 		<Unit filename="C:/Users/YUNUS/CLionProjects/TermProject/cppVector.h">
 			<Option target="TermProject"/>
 		</Unit>
+		<Unit filename="C:/Users/YUNUS/CLionProjects/TermProject/hashTable.cpp">
+			<Option target="TermProject"/>
+		</Unit>
+		<Unit filename="C:/Users/YUNUS/CLionProjects/TermProject/hashTable.h">
+			<Option target="TermProject"/>
+		</Unit>
 		<Unit filename="C:/Users/YUNUS/CLionProjects/TermProject/main.cpp">
+			<Option target="TermProject"/>
+		</Unit>
+		<Unit filename="C:/Users/YUNUS/CLionProjects/TermProject/rowReader.cpp">
+			<Option target="TermProject"/>
+		</Unit>
+		<Unit filename="C:/Users/YUNUS/CLionProjects/TermProject/rowReader.h">
 			<Option target="TermProject"/>
 		</Unit>
 		<Unit filename="C:/Users/YUNUS/CLionProjects/TermProject/CMakeLists.txt">
