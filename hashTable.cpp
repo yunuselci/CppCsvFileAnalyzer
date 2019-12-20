@@ -1,7 +1,5 @@
 #include "hashTable.h"
 
-#include <utility>
-
 hashTable::hashTable() {
     table = new Node *[TABLE_SIZE];
     for (int i = 0; i < TABLE_SIZE; i++) {
@@ -33,39 +31,63 @@ void hashTable::insert(string stockCode, string description, const string &quant
     table[index] = new Node(std::move(stockCode), std::move(description), intValueOfQuantity);
     //std::move is ide suggestion.
 }
-
-
+/* -> Tou use here, you should activate in hashTable.h,hashtable.cpp,main.cpp
 void hashTable::selectionSort() {
-    int indexOne, indexTwo;
+    int firstCounter, secondCounter;
     Node *emptyOne = new Node("empty", "thisEmpty", 0);
     Node *temp;
-    for (indexOne = 1; indexOne < TABLE_SIZE; indexOne++) {
-        if (table[indexOne] == nullptr) {
-            table[indexOne] = emptyOne;
+    for (firstCounter = 1; firstCounter < TABLE_SIZE; firstCounter++) {
+        if (table[firstCounter] == nullptr) {
+            table[firstCounter] = emptyOne;
         }
-        temp = table[indexOne];
-        indexTwo = indexOne - 1;
-        if (table[indexTwo] == nullptr) {
-            table[indexTwo] = emptyOne;
+        temp = table[firstCounter];
+        secondCounter = firstCounter - 1;
+        if (table[secondCounter] == nullptr) {
+            table[secondCounter] = emptyOne;
         }
-        while (indexTwo >= 0 && table[indexTwo]->quantity > temp->quantity) {
-            table[indexTwo + 1] = table[indexTwo];
-            indexTwo = indexTwo - 1;
-            if (table[indexTwo] == nullptr) {
-                table[indexTwo] = emptyOne;
+        while (secondCounter >= 0 && table[secondCounter]->quantity > temp->quantity) {
+            table[secondCounter + 1] = table[secondCounter];
+            secondCounter = secondCounter - 1;
+            if (table[secondCounter] == nullptr) {
+                table[secondCounter] = emptyOne;
             }
         }
-        table[indexTwo + 1] = temp;
+        table[secondCounter + 1] = temp;
     }
 }
 
 void hashTable::print() {
-    int count = 0;
     cout << "#" << '\t' << "Stock Code" << '\t' << "Description" << '\t' << "Quantity" << endl;
-    for (int index = 999999; index > 999989; --index) { //Sorting trick :), prints the table in reverse
+    for (int index = TABLE_SIZE - 1; index > TABLE_SIZE - 11; --index) { //Sorting trick :), prints the table in reverse
         if (table[index] != nullptr) {
             cout << (TABLE_SIZE - index) << "." << "\t" << table[index]->stockCode << "\t" << table[index]->description
                  << "\t" << table[index]->quantity << endl;
         }
+    }
+}
+*/
+void hashTable::printTopTen() {
+    int maxValue = 0;
+    int indexHolder = 0;
+    cout << "#" << " " << "Stock Code" << "\t" << "Description" << "\t\t\t" << "Quantity" << endl;
+    for (int i = 0; i < 10; ++i) {
+        for (int index = 0; index < TABLE_SIZE; ++index) {
+            if(table[index] != nullptr) {
+                if (table[index]->quantity > maxValue) {
+                    maxValue = table[index]->quantity;
+                    indexHolder = index;
+                }
+            }
+        }
+        for (int j = 0; j < TABLE_SIZE; ++j) {
+            if(table[j]!= nullptr){
+                if(table[j]->quantity == maxValue) {
+                    cout << i+1 << "." << " " << table[j]->stockCode << "\t" << table[j]->description
+                         << "\t\t" << table[j]->quantity << endl;
+                    table[indexHolder]->quantity = 0;
+                }
+            }
+        }
+        maxValue=0;
     }
 }

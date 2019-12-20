@@ -6,17 +6,43 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Yunus/CLionProjects/termproject/hashTable.cpp
-hashTable.h
-C:/Users/Yunus/CLionProjects/termproject/hashTable.h
-utility
+C:/Users/YUNUS/CLionProjects/TermProject/cppVector.cpp
+cppVector.h
+C:/Users/YUNUS/CLionProjects/TermProject/cppVector.h
+iostream
 -
 
-C:/Users/Yunus/CLionProjects/termproject/hashTable.h
+C:/Users/YUNUS/CLionProjects/TermProject/cppVector.h
+
+C:/Users/YUNUS/CLionProjects/TermProject/hashTable.cpp
+hashTable.h
+C:/Users/YUNUS/CLionProjects/TermProject/hashTable.h
+
+C:/Users/YUNUS/CLionProjects/TermProject/hashTable.h
 string
 -
 iostream
 -
 sstream
 -
+
+C:/Users/YUNUS/CLionProjects/TermProject/main.cpp
+fstream
+-
+rowReader.h
+C:/Users/YUNUS/CLionProjects/TermProject/rowReader.h
+hashTable.h
+C:/Users/YUNUS/CLionProjects/TermProject/hashTable.h
+chrono
+-
+
+C:/Users/YUNUS/CLionProjects/TermProject/rowReader.cpp
+rowReader.h
+C:/Users/YUNUS/CLionProjects/TermProject/rowReader.h
+sstream
+-
+
+C:/Users/YUNUS/CLionProjects/TermProject/rowReader.h
+cppVector.cpp
+C:/Users/YUNUS/CLionProjects/TermProject/cppVector.cpp
 
