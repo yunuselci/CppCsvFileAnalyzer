@@ -1,6 +1,7 @@
 #ifndef TERMPROJECT_CPPVECTOR_H
 #define TERMPROJECT_CPPVECTOR_H
 
+//unnecessary methods not defined
 template<class T>
 class cppVector {
     T *data;
@@ -19,7 +20,6 @@ public:
     int cap() const;
 
     void push_back(const T &value);
-
 
     void reset_vector(int index = 0, int capacity = 1);
 

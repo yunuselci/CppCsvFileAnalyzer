@@ -1,8 +1,8 @@
 #include <fstream>
 #include "rowReader.h"
 #include "hashTable.h"
-#include <chrono>
-
+#include <chrono> // total elapsed time
+//string,sstream are included in hashTable.h
 using namespace std;
 
 istream &operator>>(istream &str, rowReader &data) { // in driver program, for (while >> row)
@@ -19,16 +19,12 @@ int main() {
     try {
         //ifstream file("OnlineRetail.csv");
         ifstream file(R"(C:\Users\YUNUS\CLionProjects\TermProject\cmake-build-debug\OnlineRetail.csv)");
-
         //creating our classes
         rowReader row;
         hashTable table;
-        while (file >> row) { // can be done, operator has already overloaded
+        while (file >> row) { // read all rows in file
             table.insert(row[1], row[2], row[3]);
         }
-
-        //table.selectionSort(); -> This lines sort the whole hashtable
-        //table.print(); -> This lines print the table in reverse
         table.printTopTen();
     }
     catch (const char *exception) { //->Exception from cppVector class.

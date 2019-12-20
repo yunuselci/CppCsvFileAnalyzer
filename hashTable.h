@@ -27,11 +27,7 @@ public:
     static size_t hash(const string &stockCode);
 
     void insert(string stockCode, string description, const string &quantity);
-/* -> Tou use here, you should activate in hashTable.h,hashtable.cpp,main.cpp
-    void selectionSort();
 
-    void print();
-*/
     void printTopTen();
 };
 
