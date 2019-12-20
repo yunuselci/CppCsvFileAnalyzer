@@ -34,31 +34,33 @@ void hashTable::insert(string stockCode, string description, const string &quant
     //std::move is ide suggestion.
 }
 
+
 void hashTable::selectionSort() {
-    int firstCounter, secondCounter;
+    int indexOne, indexTwo;
     Node *emptyOne = new Node("empty", "thisEmpty", 0);
     Node *temp;
-    for (firstCounter = 1; firstCounter < TABLE_SIZE; firstCounter++) {
-        if (table[firstCounter] == nullptr) {
-            table[firstCounter] = emptyOne;
+    for (indexOne = 1; indexOne < TABLE_SIZE; indexOne++) {
+        if (table[indexOne] == nullptr) {
+            table[indexOne] = emptyOne;
         }
-        temp = table[firstCounter];
-        secondCounter = firstCounter - 1;
-        if (table[secondCounter] == nullptr) {
-            table[secondCounter] = emptyOne;
+        temp = table[indexOne];
+        indexTwo = indexOne - 1;
+        if (table[indexTwo] == nullptr) {
+            table[indexTwo] = emptyOne;
         }
-        while (secondCounter >= 0 && table[secondCounter]->quantity > temp->quantity) {
-            table[secondCounter + 1] = table[secondCounter];
-            secondCounter = secondCounter - 1;
-            if (table[secondCounter] == nullptr) {
-                table[secondCounter] = emptyOne;
+        while (indexTwo >= 0 && table[indexTwo]->quantity > temp->quantity) {
+            table[indexTwo + 1] = table[indexTwo];
+            indexTwo = indexTwo - 1;
+            if (table[indexTwo] == nullptr) {
+                table[indexTwo] = emptyOne;
             }
         }
-        table[secondCounter + 1] = temp;
+        table[indexTwo + 1] = temp;
     }
 }
 
 void hashTable::print() {
+    int count = 0;
     cout << "#" << '\t' << "Stock Code" << '\t' << "Description" << '\t' << "Quantity" << endl;
     for (int index = 999999; index > 999989; --index) { //Sorting trick :), prints the table in reverse
         if (table[index] != nullptr) {

@@ -6,21 +6,21 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/YUNUS/CLionProjects/TermProject/cppVector.cpp
+C:/Users/Yunus/CLionProjects/termproject/cppVector.cpp
 cppVector.h
-C:/Users/YUNUS/CLionProjects/TermProject/cppVector.h
+C:/Users/Yunus/CLionProjects/termproject/cppVector.h
 iostream
 -
 
-C:/Users/YUNUS/CLionProjects/TermProject/cppVector.h
+C:/Users/Yunus/CLionProjects/termproject/cppVector.h
 
-C:/Users/YUNUS/CLionProjects/TermProject/hashTable.cpp
+C:/Users/Yunus/CLionProjects/termproject/hashTable.cpp
 hashTable.h
-C:/Users/YUNUS/CLionProjects/TermProject/hashTable.h
+C:/Users/Yunus/CLionProjects/termproject/hashTable.h
 utility
 -
 
-C:/Users/YUNUS/CLionProjects/TermProject/hashTable.h
+C:/Users/Yunus/CLionProjects/termproject/hashTable.h
 string
 -
 iostream
@@ -28,23 +28,17 @@ iostream
 sstream
 -
 
-C:/Users/YUNUS/CLionProjects/TermProject/main.cpp
+C:/Users/Yunus/CLionProjects/termproject/main.cpp
 fstream
 -
 rowReader.h
-C:/Users/YUNUS/CLionProjects/TermProject/rowReader.h
+C:/Users/Yunus/CLionProjects/termproject/rowReader.h
 hashTable.h
-C:/Users/YUNUS/CLionProjects/TermProject/hashTable.h
+C:/Users/Yunus/CLionProjects/termproject/hashTable.h
 chrono
 -
 
-C:/Users/YUNUS/CLionProjects/TermProject/rowReader.cpp
-rowReader.h
-C:/Users/YUNUS/CLionProjects/TermProject/rowReader.h
-sstream
--
-
-C:/Users/YUNUS/CLionProjects/TermProject/rowReader.h
+C:/Users/Yunus/CLionProjects/termproject/rowReader.h
 cppVector.cpp
-C:/Users/YUNUS/CLionProjects/TermProject/cppVector.cpp
+C:/Users/Yunus/CLionProjects/termproject/cppVector.cpp
 

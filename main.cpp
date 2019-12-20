@@ -17,7 +17,7 @@ int main() {
     const auto before = clock::now();
     //We have try,catch because cppVector.cpp can throw Error
     try {
-        ifstream file("OnlineRetail.csv");
+        ifstream file("C:\\Users\\Yunus\\CLionProjects\\termproject\\cmake-build-debug\\OnlineRetail.csv");
         //creating our classes
         rowReader row;
         hashTable table;
