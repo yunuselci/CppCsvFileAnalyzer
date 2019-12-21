@@ -30,8 +30,8 @@ int main() {
     catch (const char *exception) { //->Exception from cppVector class.
         cout << exception << endl;
     }
-
     const sec duration = clock::now() - before;
     cout << endl;
     cout << "Total Elapsed Time: " << duration.count() << " seconds" << endl;
+    return 0;
 }

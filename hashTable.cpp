@@ -59,3 +59,5 @@ void hashTable::printTopTen() {
         maxValue = 0; // update max value 0 again for second base loop
     }
 }
+
+
